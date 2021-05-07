@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:ImageEntrySampelApp.CustomControl"
+             xmlns:VapoliaSVG="clr-namespace:XamSvg.XamForms;assembly=XamSvg.XamForms"
+             x:Class="ImageEntrySampelApp.MainPage">
+
+    <StackLayout Margin="40">
+        <VapoliaSVG:SvgImage
+               HorizontalOptions="CenterAndExpand"
+               Svg="appleicon.svg" WidthRequest="500"> 
+        </VapoliaSVG:SvgImage>
+
+        <!-- Here change Renderer to use SVG graphic -->
+        <custom:ImageEntry x:Name="EMailEntry"
+               ImageAlignment="Both"
+               LeftImage="magifiericon.png"
+               RightImage="mailicon.png"
+               ImageWidth="22"
+               ImageHeight="22"
+               LineColor="Gray"
+               BackgroundColor="LightGreen"
+               Keyboard="Email"
+               FontSize="17"
+               Text=""
+               HorizontalOptions="FillAndExpand"
+               Placeholder="E-Mail">
+        </custom:ImageEntry>
+    </StackLayout>
+
+</ContentPage>
